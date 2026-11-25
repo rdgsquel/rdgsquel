@@ -6,7 +6,7 @@ if not exist bot.pid (
   exit /b
 )
 set /p PID=<bot.pid
-taskkill /PID %PID% /T /F >nul 2>&1
+taskkill /FI "PID eq %PID%" /FI "IMAGENAME eq node.exe" /T /F >nul 2>&1
 del bot.pid >nul 2>&1
 echo Bot desligado.
 timeout /t 3 >nul

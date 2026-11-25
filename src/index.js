@@ -12,4 +12,4 @@ process.on('unhandledRejection', (e) => console.error('[bot] erro:', e?.message 
 import { writeFileSync, rmSync } from 'node:fs';
 writeFileSync('bot.pid', String(process.pid));
 process.on('exit', () => rmSync('bot.pid', { force: true }));
-process.on('SIGINT', () => process.exit(0));
+for (const s of ['SIGINT', 'SIGTERM']) process.on(s, () => process.exit(0));
