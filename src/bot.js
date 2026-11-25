@@ -87,7 +87,8 @@ async function handle(sock, msg) {
   } catch (err) {
     console.error('[bot] falha:', err);
     await react(sock, jid, msg.key, '❌');
-    await sock.sendMessage(jid, { text: `Não consegui fazer a figurinha: ${err.message}` }, { quoted: msg });
+    await sock.sendMessage(jid, { text: `Não consegui fazer a figurinha: ${err.message}` }, { quoted: msg })
+      .catch(() => {});
   }
 }
 
@@ -114,6 +115,6 @@ export async function startBot() {
   });
   sock.ev.on('messages.upsert', async ({ messages, type }) => {
     if (type !== 'notify') return;
-    for (const m of messages) await handle(sock, m);
+    for (const m of messages) await handle(sock, m).catch((e) => console.error('[bot] erro:', e.message));
   });
 }
