@@ -22,7 +22,7 @@ npm start
 ## Windows (atalhos)
 - **Ligar bot.bat**: dois cliques para ligar (instala tudo na 1ª vez).
 - **Atualizar bot.bat**: baixa a versão mais nova do GitHub (precisa do Git: `winget install Git.Git`). Mantém o login.
-- Para desligar: Ctrl + C na janela do bot (ou feche a janela).
+- Para desligar: aperte Enter na janela do bot (ou feche a janela).
 
 ## Observações
 - Usa a biblioteca não oficial Baileys: use um número secundário se puder (risco de bloqueio).

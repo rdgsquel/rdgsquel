@@ -6,6 +6,4 @@ if not exist node_modules (
   call npm.cmd install
 )
 if not exist .env copy .env.example .env >nul
-echo Ligando o bot... Para desligar, aperte Ctrl + C ou feche esta janela.
-call npm.cmd start
-pause
+call npm.cmd start --silent || pause
