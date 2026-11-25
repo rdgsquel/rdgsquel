@@ -7,3 +7,9 @@ startBot().catch((err) => {
 
 // Evita que um erro isolado derrube o bot.
 process.on('unhandledRejection', (e) => console.error('[bot] erro:', e?.message || e));
+
+// Salva o número do processo para o "Desligar bot.bat" conseguir encerrar.
+import { writeFileSync, rmSync } from 'node:fs';
+writeFileSync('bot.pid', String(process.pid));
+process.on('exit', () => rmSync('bot.pid', { force: true }));
+process.on('SIGINT', () => process.exit(0));

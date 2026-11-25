@@ -19,6 +19,10 @@ npm start
 
 `!id` em qualquer conversa mostra o JID dela (para usar em `ALLOWED_GROUPS`/`ALLOWED_USERS`).
 
+## Windows (atalhos)
+- **Ligar bot.bat**: dois cliques para ligar (instala tudo na 1ª vez).
+- **Desligar bot.bat**: dois cliques para desligar (ou feche a janela do bot).
+
 ## Observações
 - Usa a biblioteca não oficial Baileys: use um número secundário se puder (risco de bloqueio).
 - A sessão fica em `auth_info/` — não compartilhe. Para deslogar, apague a pasta.
