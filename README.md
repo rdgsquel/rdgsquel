@@ -21,7 +21,7 @@ npm start
 
 ## Windows (atalhos)
 - **Ligar bot.bat**: dois cliques para ligar (instala tudo na 1ª vez).
-- **Desligar bot.bat**: dois cliques para desligar (ou feche a janela do bot).
+- Para desligar: Ctrl + C na janela do bot (ou feche a janela).
 
 ## Observações
 - Usa a biblioteca não oficial Baileys: use um número secundário se puder (risco de bloqueio).
